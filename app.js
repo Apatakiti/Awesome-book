@@ -45,12 +45,10 @@ addBtn.addEventListener('click', () => {
 removeBook();
 
 window.addEventListener('load', () => {
- let bookData = JSON.parse(localStorage.getItem('bookDatas'))
+  let bookData = JSON.parse(localStorage.getItem('bookDatas'));
   if (bookData) {
     generateBook();
   } else {
     bookData = [];
   }
 });
-
-

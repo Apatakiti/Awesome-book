@@ -30,7 +30,7 @@ To get a local copy up and running it, follow these simple steps.
 
 2. Copy the following link and paste it into your VSCode or your terminal:
 
-> git@github.com:angeluray/awesome-books.git
+> https://github.com/Ademola-coding/Sneak-Peek-Awesome-books.git
 
 3. Store it in the file you created before.
 

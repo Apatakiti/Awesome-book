@@ -14,7 +14,7 @@ class Book {
 
 function generateBook() {
   booksContainer.innerHTML = '';
-  for (let i = 0; i < bookDatas.length; i = i + 1) {
+  for (let i = 0; i < bookDatas.length; i += 1) {
     booksContainer.innerHTML += `<div class="book">
                      <div>${bookDatas[i].title}</div>
                      <div>${bookDatas[i].author}</div>

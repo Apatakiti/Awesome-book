@@ -2,55 +2,60 @@
 
 # Project Name
 
-> Description the project.
-
+> Books List.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- JS
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+> None.
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running it, follow these simple steps.
 
 ### Prerequisites
 
+- Internet Service.
+- Basic Knowledge about Git and Github.
+- VSCode.
+
 ### Setup
+
+1. Create an empty folder in your computer to store the clone.
+
+2. Copy the following link and paste it into your VSCode or your terminal:
+
+> git@github.com:angeluray/awesome-books.git
+
+3. Store it in the file you created before.
+
+4. Create a new branch for working and make changes to adapt it according to your requirements.
 
 ### Install
 
+To install linters please open the ***.github/workflows*** then get into ***linters.yml*** and check the instructions and commands.
+
 ### Usage
 
-### Run tests
-
-### Deployment
-
-
+For educational purpose only, use it as a guideline.
 
 ## Authors
 
-👤 **Author1**
+👤 **Ademola Owoeye**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Ademola](https://github.com/Ademola-coding)
 
-👤 **Author2**
+👤 **Rodney Chakwesha**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@RodChak](https://github.com/RodChak)
+- Twitter: [@RodneyChaks](https://twitter.com/RodneyChaks)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rtc97/)
+
 
 ## 🤝 Contributing
 
@@ -61,13 +66,3 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.

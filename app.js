@@ -1,4 +1,3 @@
-/* eslint-disable rule-you-want-to-disable */
 const booksContainer = document.getElementById('books');
 const inpTitle = document.getElementById('inp-title');
 const inpAuthor = document.getElementById('inp-author');

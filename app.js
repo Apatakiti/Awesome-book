@@ -43,3 +43,14 @@ addBtn.addEventListener('click', () => {
   localStorage.setItem('bookDatas', JSON.stringify(bookDatas));
 });
 removeBook();
+
+window.addEventListener('load', () => {
+ let bookData = JSON.parse(localStorage.getItem('bookDatas'))
+  if (bookData) {
+    generateBook();
+  } else {
+    bookData = [];
+  }
+});
+
+

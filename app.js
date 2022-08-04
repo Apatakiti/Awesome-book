@@ -10,15 +10,15 @@ class Book {
    this.author = author;
  }
 
- //adding
+ // adding
  static addBook(Dbook) {
-  this.bookDatas.push(Dbook);
+   this.bookDatas.push(Dbook);
  }
 
- //removing
+ // removing
  static remBook(i) {
-      this.bookDatas.splice(i, 1);
-    }
+   this.bookDatas.splice(i, 1);
+ }
 }
 
 function generateBook() {
@@ -31,7 +31,7 @@ function generateBook() {
   }
 }
 
-//remove book
+// remove book
 function removeBook(i) {
   Book.remBook(i);
   generateBook();
@@ -43,7 +43,7 @@ function generateNewBook(i) {
   </div>`;
 }
 
-//adding book
+// adding book
 const addBtn = document.getElementById('add-btn');
 addBtn.addEventListener('click', () => {
   const newBook = new Book(inpTitle.value, inpAuthor.value);
@@ -55,7 +55,7 @@ addBtn.addEventListener('click', () => {
 removeBook();
 
 window.addEventListener('load', () => {
-  Book.bookDatas = JSON.parse(localStorage.getItem('bookD')); 
+  Book.bookDatas = JSON.parse(localStorage.getItem('bookD'));
   if (Book.bookDatas) {
     generateBook();
   } else {

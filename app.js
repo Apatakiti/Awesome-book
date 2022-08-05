@@ -1,6 +1,9 @@
+// import { Datetime } from './luxon.js';
+
 const booksContainer = document.getElementById('books');
 const inpTitle = document.getElementById('inp-title');
 const inpAuthor = document.getElementById('inp-author');
+
 
 class Book {
  static bookDatas = []
@@ -10,8 +13,8 @@ class Book {
    this.author = author;
  }
 
- // adding
- static addBook(Dbook) {
+   // adding
+  static addBook(Dbook) {
    this.bookDatas.push(Dbook);
  }
 
@@ -25,9 +28,9 @@ function generateBook() {
   booksContainer.innerHTML = '';
   for (let i = 0; i < Book.bookDatas.length; i += 1) {
     booksContainer.innerHTML += `<div class="book">
-                     <div class="titleAndBooks">"${Book.bookDatas[i].title}" by ${Book.bookDatas[i].author}</div> <button class="rem-btn" onclick="removeBook(${i})">Remove</button>
-                     </div>
-                     `;
+    <div class="titleAndBooks">"${Book.bookDatas[i].title}" by ${Book.bookDatas[i].author}</div> <button class="rem-btn" onclick="removeBook(${i})">Remove</button>
+    </div> `;
+                 
   }
 }
 
@@ -62,3 +65,52 @@ window.addEventListener('load', () => {
     Book.bookDatas = [];
   }
 });
+
+const list = document.getElementsByClassName('list')
+const page1 = document.getElementsByClassName('page1')
+
+list[0].addEventListener('click', () => {
+  for (let i = 0; i < page1.length; i += 1) {
+    page1[0].style.display = 'block';
+
+    for (let i = 0; i < page2.length; i += 1) {
+      page2[0].style.display = 'none';
+    }
+    for (let i = 0; i < page3.length; i += 1) {
+      page3[0].style.display = 'none';
+    }
+  }
+})
+
+const addNew = document.getElementsByClassName('Add-new')
+const page2 = document.getElementsByClassName('page2')
+
+addNew[0].addEventListener('click', () => {
+  for (let i = 0; i < page2.length; i += 1) {
+    page2[0].style.display = 'block';
+
+    for (let i = 0; i < page1.length; i += 1) {
+      page1[0].style.display = 'none';
+    }
+    for (let i = 0; i < page3.length; i += 1) {
+      page3[0].style.display = 'none';
+    }
+  }
+})
+
+const page3 = document.getElementsByClassName('page3')
+const contact = document.getElementsByClassName('contact')
+
+contact[0].addEventListener('click', () => {
+  for (let i = 0; i < page3.length; i += 1) {
+    page3[0].style.display = 'block';
+
+    for (let i = 0; i < page1.length; i += 1) {
+      page1[0].style.display = 'none';
+    }
+
+    for (let i = 0; i < page2.length; i += 1) {
+      page2[0].style.display = 'none';
+    }
+  }
+})

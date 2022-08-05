@@ -94,7 +94,7 @@ h2 {
 }
 
 .pp {
-  margin-left: 5%;
+  margin-left: 7%;
 }
 
 .list,
@@ -156,4 +156,10 @@ article {
 
 .paragraphs {
   text-align: flex-start;
+}
+
+.date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }

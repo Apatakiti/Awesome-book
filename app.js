@@ -1,4 +1,4 @@
-// import { Datetime } from './luxon.js';
+// import { DateTime } from "luxon";
 
 const booksContainer = document.getElementById('books');
 const inpTitle = document.getElementById('inp-title');
@@ -99,3 +99,13 @@ contact[0].addEventListener('click', () => {
     page2[0].style.display = 'none';
   }
 });
+
+// added Time
+function contTimeNDatUpdat() {
+  const date = document.getElementsByClassName('date');
+  const theDate = new Date(Date.now());
+  date[0].innerHTML = theDate.toLocaleString(theDate.DATETIME_MED_WITH_SECONDS);
+}
+setInterval(() => {
+  contTimeNDatUpdat();
+}, 1000);

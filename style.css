@@ -15,7 +15,9 @@ h1 {
 
 #books {
   display: grid;
-} 
+  border: 2px solid;
+  padding: 2%;
+}
 
 .book {
   display: flex;
@@ -68,11 +70,10 @@ h2 {
 
 .navi {
   display: flex;
-  flex-direction:row ;
+  flex-direction: row;
   border: 2px solid;
   margin: 1%;
   align-items: center;
-
 }
 
 .logo {
@@ -85,27 +86,29 @@ h2 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
 }
 
 .Add-new {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
 }
 
-.pp{
+.pp {
   margin-left: 5%;
 }
 
-.list, .Add-new, .contact {
+.list,
+.Add-new,
+.contact {
   margin-left: 5%;
 }
 
-.list:hover, .Add-new:hover, .contact:hover {
+.list:hover,
+.Add-new:hover,
+.contact:hover {
   color: blue;
   cursor: pointer;
 }
-
 
 .verti-line-container {
   margin-left: 5%;
@@ -114,13 +117,8 @@ h2 {
 .verti-line {
   background-color: black;
   width: 50%;
-  height: 20px; 
+  height: 20px;
   margin: 50% 0;
-}
-
-#books {
-  border: 2px solid;
-  padding: 2%;
 }
 
 .copyright {
@@ -134,7 +132,8 @@ h2 {
   margin-left: 5%;
 }
 
-.page2, .page3 {
+.page2,
+.page3 {
   display: none;
 }
 
@@ -144,7 +143,7 @@ h2 {
 }
 
 .dot {
-  flex: .1 .1 0;
+  flex: 0.1 0.1 0;
   color: #fff;
 }
 

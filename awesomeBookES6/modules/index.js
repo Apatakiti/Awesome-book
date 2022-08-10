@@ -1,4 +1,5 @@
 import { Nav, ClassBooks } from './index2.js';
+import { DateTime } from './luxonCript.js';
 
 const booksContainer = document.getElementById('books');
 const inpTitle = document.getElementById('inp-title');
@@ -64,8 +65,7 @@ window.addEventListener('load', () => {
 
 function contTimeNDatUpdat() {
   const date = document.getElementsByClassName('date');
-  const theDate = new Date(Date.now());
-  date[0].innerHTML = theDate.toLocaleString(theDate.DATETIME_MED_WITH_SECONDS);
+  date[0].innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS)
 }
 
 setInterval(() => {

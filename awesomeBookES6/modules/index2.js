@@ -4,7 +4,7 @@ export class ClassBooks {
   }
 }
 
-export function Nav() {
+export const Nav = () => {
   const list = document.getElementsByClassName('list');
   const page1 = document.getElementsByClassName('page1');
   const page3 = document.getElementsByClassName('page3');
@@ -40,4 +40,4 @@ export function Nav() {
       page2[0].style.display = 'none';
     }
   });
-}
+};

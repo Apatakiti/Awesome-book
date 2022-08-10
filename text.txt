@@ -1,0 +1,501 @@
+you are
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script defer src="app.js"></script> -->
+    <link rel="stylesheet" href="index.css">
+    <title>Awesome Book</title>
+</head>
+
+<body>
+    <div class="navi">
+        <div class="logo">Awesome books</div>
+          <div class="main-nav">
+            <div class="list">list</div>
+            <div class="verti-line-container"> <div class="verti-line">.</div></div>
+            <div class="Add-new"><p class="pp">Add</p><p class="pp">new</p></div>
+            <div class="verti-line-container"><div class="verti-line">.</div></div>
+            <div class="contact">contact</div>
+           </div>
+         </div>
+
+         <div class="date-container">
+           <div class="date"></div>
+         </div>
+
+         <!-- page 1 -->
+         <div class="page1">
+           <h1>All awesome books</h1>
+           <div id="books"> </div>
+         </div>
+
+        <!-- page 2 -->
+         <div class="page2">
+            <h1>Add a new Book</h1>
+             <div id="input-container">
+              <input type="text" id="inp-title" placeholder="Title"><br><br>
+              <input type="text" id="inp-author" placeholder="Author"><br><br>
+              <button type="submit" id="add-btn">Add</button>
+             </div>
+          </div>
+
+    <!-- page 3 -->
+    <div class="page3">
+       
+       <div class="article-con">
+           <div class="dot">.</div>
+       <article>
+         <h2>contact  infomation</h2>
+           <div class="paragraghs">
+          <p>Do have any questions or you want to say "Hello"?</p>
+          <p>You can reach out to us!</p>
+          </div>
+          <ul>
+             <li>Our e-mail: mail@mail.com</li>
+             <li>Our phone number: 0043586534422</li>
+             <li>Our address: Streetname 22, 84503 City, Country</li>
+          </ul>
+        </article>
+       </div>
+     </div>
+
+    <div class="copyright">
+        <p class="right">copyright</p>
+        <p class="right">...</p>
+    </div>
+    <script type="module" src="/modules/index.js"></script>
+</body>
+</html> 
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 10%;
+    border: 3px solid;
+    padding: 2%;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #books {
+    display: grid;
+    border: 2px solid;
+    padding: 2%;
+  }
+  
+  .book {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .titleAndBooks {
+    flex: 1;
+  }
+  
+  .rem-btn {
+    flex: 1;
+  }
+  
+  .line-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+  
+  .line {
+    background-color: black;
+    width: 10%;
+    height: 3px;
+    border-radius: 3px;
+    color: white;
+  }
+  
+  #input-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin-left: 32%;
+    margin-right: 32%;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 5%;
+  }
+  
+  #add-btn {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+  }
+  
+  .navi {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid;
+    margin: 1%;
+    align-items: center;
+  }
+  
+  .logo {
+    flex: 1;
+    padding-left: 5%;
+  }
+  
+  .main-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .Add-new {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .pp {
+    margin-left: 7%;
+  }
+  
+  .list,
+  .Add-new,
+  .contact {
+    margin-left: 5%;
+  }
+  
+  .list:hover,
+  .Add-new:hover,
+  .contact:hover {
+    color: blue;
+    cursor: pointer;
+  }
+  
+  .verti-line-container {
+    margin-left: 5%;
+  }
+  
+  .verti-line {
+    background-color: black;
+    width: 50%;
+    height: 20px;
+    margin: 50% 0;
+  }
+  
+  .copyright {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid;
+    margin-top: 3%;
+  }
+  
+  .right {
+    margin-left: 5%;
+  }
+  
+  .page2,
+  .page3 {
+    display: none;
+  }
+  
+  .article-con {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .dot {
+    flex: 0.1 0.1 0;
+    color: #fff;
+  }
+  
+  article {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .paragraphs {
+    text-align: flex-start;
+  }
+  
+  .date-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const booksContainer = document.getElementById('books');
+const inpTitle = document.getElementById('inp-title');
+const inpAuthor = document.getElementById('inp-author');
+
+class ClassBooks {
+  constructor() {
+    return [];
+  }
+}
+
+const bookDatas = new ClassBooks();
+
+class Book {
+        constructor(title, author) {
+              this.title = title;
+              this.author = author;
+            }
+
+     static generateBook(i) {
+        booksContainer.innerHTML += `<div class="book">
+        <div class="titleAndBooks">"${bookDatas[i].title}" by ${bookDatas[i].author}</div> 
+        <button class="rem-btn">Remove</button>
+        </div> `;
+
+      const remBtn = document.querySelectorAll('.rem-btn');
+       remBtn.forEach( (btn, i) => {
+       btn.addEventListener('click', () => Book.remBook(i) )
+     });
+    }
+
+ static remBook(i) {
+   bookDatas.splice(i, 1);
+   localStorage.setItem('bookD', JSON.stringify(bookDatas))
+   Book.generateNewBook()           
+ }
+
+ static generateNewBook() {
+   booksContainer.innerHTML = '';
+     for (let i = 0; i < bookDatas.length; i++) {
+       booksContainer.innerHTML += `<div class="book">
+        <div class="titleAndBooks">"${bookDatas[i].title}" by ${bookDatas[i].author}</div>
+      <button class="rem-btn"> Remove </button>
+    </div>`;
+
+    const remBtn = document.querySelectorAll('.rem-btn');
+    remBtn.forEach( (btn, i) => { 
+      btn.addEventListener('click', () => Book.remBook(i) )
+    });
+   }
+  }
+}
+
+
+const addBtn = document.getElementById('add-btn');
+  addBtn.addEventListener('click', () => {
+  const newBook = new Book(inpTitle.value, inpAuthor.value);
+  bookDatas.push(newBook);
+  Book.generateBook(bookDatas.length - 1);
+  localStorage.setItem('bookD', JSON.stringify(bookDatas));
+});
+
+
+window.addEventListener('load', () => {
+
+ const bookData = JSON.parse(localStorage.getItem('bookD'));
+  if (bookData) {
+    bookDatas.push(...bookData);
+    Book.generateNewBook();;
+  }
+});
+
+// import { the } from "./index2";
+the
+// import { Nav } from "./index2";
+// Nav()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ export const the = console.log('themooooo')
+ 
+ export const Nav = () => { 
+    const list = document.getElementsByClassName('list');
+    const page1 = document.getElementsByClassName('page1');
+    const page3 = document.getElementsByClassName('page3');
+    const contact = document.getElementsByClassName('contact');
+    const addNew = document.getElementsByClassName('Add-new');
+    const page2 = document.getElementsByClassName('page2');
+    
+    list[0].addEventListener('click', () => {
+      for (let i = 0; i < page1.length; i += 1) {
+        page1[0].style.display = 'block';
+    
+        for (let i = 0; i < page2.length; i += 1) {
+          page2[0].style.display = 'none';
+        }
+        for (let i = 0; i < page3.length; i += 1) {
+          page3[0].style.display = 'none';
+        }
+      }
+    });
+    
+    addNew[0].addEventListener('click', () => {
+      for (let i = 0; i < page2.length; i += 1) {
+        page2[0].style.display = 'block';
+        page1[0].style.display = 'none';
+        page3[0].style.display = 'none';
+      }
+    });
+    
+    contact[0].addEventListener('click', () => {
+      for (let i = 0; i < page3.length; i += 1) {
+        page3[0].style.display = 'block';
+        page1[0].style.display = 'none';
+        page2[0].style.display = 'none';
+      }
+    });
+    
+    // added Time
+    function contTimeNDatUpdat() {
+      const date = document.getElementsByClassName('date');
+      const theDate = new Date(Date.now());
+      date[0].innerHTML = theDate.toLocaleString(theDate.DATETIME_MED_WITH_SECONDS);
+    }
+    
+    setInterval(() => {
+      contTimeNDatUpdat();
+    }, 1000); 
+    }
+    Nav()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const booksContainer = document.getElementById('books');
+const inpTitle = document.getElementById('inp-title');
+const inpAuthor = document.getElementById('inp-author');
+
+class Book {
+        static bookDatas = []
+
+        constructor(title, author) {
+              this.title = title;
+              this.author = author;
+            }
+
+     static generateBook(i) {
+        booksContainer.innerHTML += `<div class="book">
+        <div class="titleAndBooks">"${this.bookDatas[i].title}" by ${this.bookDatas[i].author}</div> 
+        <button class="rem-btn">Remove</button>
+        </div> `;
+
+     const remBtn = document.getElementsByClassName('rem-btn');
+       remBtn.forEach( (btn, i) => {
+       btn.addEventListener('click', () => {
+       this.remBook(i);
+       })
+     });
+    }
+
+
+ static remBook(i) {
+   this.bookDatas.splice(i, 1);
+   localStorage.setItem('bookD', JSON.stringify(this.bookDatas))
+   this.generateNewBook()           ////////////////////////
+ }
+
+ static generateNewBook() {
+   booksContainer.innerHTML = '';
+     for (let i = 0; i < this.bookDatas.length; i++) {
+       booksContainer.innerHTML += `<div class="book">
+        <div class="titleAndBooks">"${this.bookDatas[i].title}" by ${this.bookDatas[i].author}</div>
+      <button class="rem-btn"> Remove </button>
+    </div>`;
+
+    const remBtn = document.getElementsByClassName('rem-btn');
+    remBtn.forEach( (btn, i) => { 
+      btn.addEventListener('click', () => {
+        this.remBook()
+       })
+    });
+   }
+  }
+}
+
+
+const addBtn = document.getElementById('add-btn');
+  addBtn.addEventListener('click', () => {
+  const newBook = new Book(inpTitle.value, inpAuthor.value);
+  Book.bookDatas.push(newBook);
+  Book.generateBook(Book.bookDatas.length - 1);
+  localStorage.setItem('bookD', JSON.stringify(Book.bookDatas));
+});
+
+
+window.addEventListener('load', () => {
+  Book.bookDatas = JSON.parse(localStorage.getItem('bookD'));
+  if (Book.bookDatas) {
+    generateBook();
+  } else {
+    Book.bookDatas = [];
+  }
+});
+
+
+
+
+
+
+
+// import { DateTime } from './luxon';
+// const { DateTime } = require("luxon");

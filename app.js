@@ -53,8 +53,6 @@ addBtn.addEventListener('click', () => {
 });
 removeBook();
 
-
-
 window.addEventListener('load', () => {
   Book.bookDatas = JSON.parse(localStorage.getItem('bookD'));
   if (Book.bookDatas) {
@@ -63,16 +61,6 @@ window.addEventListener('load', () => {
     Book.bookDatas = [];
   }
 });
-
-
-
-
-
-
-
-
-
-
 
 const list = document.getElementsByClassName('list');
 const page1 = document.getElementsByClassName('page1');

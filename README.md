@@ -10,10 +10,6 @@
 - CSS
 - JS
 
-## Live Demo
-
-> N
-
 ## Getting Started
 
 To get a local copy up and running it, follow these simple steps.

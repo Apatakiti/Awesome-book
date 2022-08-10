@@ -63,10 +63,10 @@ window.addEventListener('load', () => {
   }
 });
 
-function contTimeNDatUpdat() {
+const contTimeNDatUpdat = () => {
   const date = document.getElementsByClassName('date');
-  date[0].innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS)
-}
+  date[0].innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
+};
 
 setInterval(() => {
   contTimeNDatUpdat();

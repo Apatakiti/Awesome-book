@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Awesome books: with ES6
 
 > Books List.
 
@@ -9,10 +9,6 @@
 - HTML
 - CSS
 - JS
-
-## Live Demo
-
-> None.
 
 ## Getting Started
 
@@ -44,17 +40,12 @@ To install linters please open the ***.github/workflows*** then get into ***lint
 
 For educational purpose only, use it as a guideline.
 
-## Authors
+## Author
 
 👤 **Ademola Owoeye**
 
 - GitHub: [@Ademola](https://github.com/Ademola-coding)
 
-👤 **Rodney Chakwesha**
-
-- GitHub: [@RodChak](https://github.com/RodChak)
-- Twitter: [@RodneyChaks](https://twitter.com/RodneyChaks)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rtc97/)
 
 
 ## 🤝 Contributing
